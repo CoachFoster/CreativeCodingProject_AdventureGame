@@ -90,7 +90,7 @@ if choice1.lower() == 'y':
       print(pcblue + 'If you had a flashlight, you could signal for help.' + pcend)
       print(pcred + '---You are still lost. You lost the game.---' + pcend)
   else:
-      print(pcblue + 'You are waking and trip over a fallen long.' + pcend)
+      print(pcblue + 'You are walking and trip over a fallen long.' + pcend)
       print(pcblue + 'You hurt your foot. You sit down to wait for help.' + pcend)
       time.sleep(2)
       print(pcblue + 'This could be a long time.' + pcend)
@@ -129,7 +129,7 @@ else:
     print(pcblue + '"If you have a', comp_choice + ', I may be able to help you."' + pcend)
     
     if item == comp_choice[0].lower():
-      print(pcblue + 'Luckily, you choose correctly!' + pcend)
+      print(pcblue + 'Luckily, you chose correctly!' + pcend)
       print(pcblue + 'You give the woman the', comp_choice + '.' + pcend)
       time.sleep(2)
       print(pcblue + 'She helps you get home.' + pcend)
