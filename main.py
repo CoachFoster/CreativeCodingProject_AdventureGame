@@ -3,6 +3,7 @@
 #################################
 
 import time
+import random
 
 # set terminal output colors
 pcred = "\033[91m"
@@ -118,20 +119,23 @@ else:
   answer = input('She asks, "What is your favorite computer programming language?": ')
   answer = answer.lower()
 
+  items = ['map', 'flashlight', 'chocolate bar', 'rope', 'stick']
+  comp_choice = random.choice(items)
+
   if answer == 'python':
     time.sleep(2)
     print(pcblue + 'She says, "Yes, that is my favorite, too.' + pcend)
     time.sleep(2)
-    print(pcblue + '"If you have some chocolate, I will help you."' + pcend)
+    print(pcblue + '"If you have a', comp_choice + ', I may be able to help you."' + pcend)
     
-    if item == 'c':
+    if item == comp_choice[0].lower():
       print(pcblue + 'Luckily, you choose correctly!' + pcend)
-      print(pcblue + 'You give the woman the chocolate.' + pcend)
+      print(pcblue + 'You give the woman the', comp_choice + '.' + pcend)
       time.sleep(2)
       print(pcblue + 'She helps you get home.' + pcend)
       print(pcgreen + 'CONGRATULATIONS! You won the game.' + pcend)
     else:
-      print(pcblue + 'You should have chosen that chocolate!' + pcend)
+      print(pcblue + 'You should have chosen that', comp_choice + '!' + pcend)
       time.sleep(2)
       print(pcblue + 'She rides away, leaving you alone and lost.' + pcend)
       print(pcred + '---You lost the game.---' + pcend)
